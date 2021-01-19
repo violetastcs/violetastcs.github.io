@@ -41,6 +41,14 @@ BEGIN {
 	block = "p";
 }
 
+# Quotes
+/^>/ {
+	newblock();
+	block = "quote";
+	text = substr($0, 2);
+	next;
+}
+
 # Escape html
 esc != "false" {
 	gsub("&", "\\&amp;")

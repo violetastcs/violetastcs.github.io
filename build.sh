@@ -25,12 +25,10 @@ mkdir -p build/static build/posts
 
 for post in $(find content/posts -type f | grep "\.md"); do
 	meta="$(cat $post | sed '1,/===/!d' | sed '/===/d')"
-	echo "$meta" > /dev/stderr
 	eval "$meta"
 	content="$(cat $post | sed '1,/^===$/d')"
 	path="$(echo $post | sed 's/md/html/g' | sed 's/content/build/g')"
 	mkdir -p $(dirname $path)
-	echo "$backg" > /dev/stderr
 	./templates/post.html.sh "$content" "$backg" "$title" "$colour" > $path
 done
 

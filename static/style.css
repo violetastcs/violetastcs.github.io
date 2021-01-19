@@ -20,3 +20,11 @@ img {
 html { 
 	margin-bottom: 300px;
 }
+
+a:link {
+	color: white;
+}
+
+a:visited {
+	color: grey;
+}

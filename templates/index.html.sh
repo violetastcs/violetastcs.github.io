@@ -22,7 +22,6 @@ list_posts() {
 	section=$1
 	for post in $(ls content/posts/"$section"); do
 		meta="$(cat content/posts/$section/$post | sed '1,/===/!d' | sed '/===/d')"
-		#echo "$meta" > /dev/stderr
 		eval "$meta"
 		path="/posts/$section/$(echo $post | sed 's/md/html/g')"
 		echo "<li><a href=\"$path\">$title</a></li>"
