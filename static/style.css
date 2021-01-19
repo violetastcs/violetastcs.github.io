@@ -28,3 +28,7 @@ a:link {
 a:visited {
 	color: grey;
 }
+
+blockquote {
+	font-style: italic;
+}

@@ -44,7 +44,7 @@ BEGIN {
 # Quotes
 /^>/ {
 	newblock();
-	block = "quote";
+	block = "blockquote";
 	text = substr($0, 2);
 	next;
 }
@@ -157,7 +157,7 @@ block == "li" {
 	# Images
 	while(match($0, /!\[[^\]]+\]\([^\)]+\)/)){
 		split(substr($0, RSTART, RLENGTH), a, /(!\[)|\)|(\]\()/);
-		sub(/!\[[^\]]+\]\([^\)]+\)/, "<img style=\"float:right; padding:20px\" src=\"static/images/" a[3] "\" alt=\"" a[2] "\">");
+		sub(/!\[[^\]]+\]\([^\)]+\)/, "<img style=\"float:right; padding:20px\" src=\"/static/images/" a[3] "\" alt=\"" a[2] "\">");
 	}
 	# Links
 	while(match($0, /\[[^\]]+\]\([^\)]+\)/)){

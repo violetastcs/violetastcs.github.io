@@ -5,6 +5,8 @@ colour="white"
 # Capitalist Gang-stalking
 #### It's real, It's here, know the signs.
 
+![Gang-stalking poster](gang-stalking.jpg)
+
 *Originally posted [here](https://violence.substack.com/p/capitalist-gang-stalking)*
 
 ---------------
