@@ -1,0 +1,22 @@
+body {
+	background: #fdfdbb;
+}
+
+@media (min-width: 55em) { 
+	.lol { 
+		display: inline-block; 
+		vertical-align: top;
+	}
+}
+
+img {
+	max-width: 150px;
+}
+
+.lol {
+	max-width: 275px;
+}
+
+html { 
+	margin-bottom: 300px;
+}
