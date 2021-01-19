@@ -19,7 +19,7 @@
 # You should have received a copy of the GNU General Public License
 # along with Violetas' website. If not, see <https://www.gnu.org/licenses/>.
 
-mkdir -p build/static build/posts
+mkdir -p build/static build/posts build/serve
 
 ./templates/index.html.sh > build/index.html
 
@@ -39,3 +39,4 @@ for item in $(find content/ -type f | grep -v "\.md"); do
 done
 
 cp -r static/* build/static/
+cp -r serve/* build/serve/
